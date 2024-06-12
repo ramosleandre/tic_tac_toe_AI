@@ -1,7 +1,3 @@
-Sure, here's a draft for your GitHub README to detail your Tic-Tac-Toe AI project:
-
----
-
 # Tic-Tac-Toe AI
 
 Welcome to the Tic-Tac-Toe AI project! This repository aims to develop an intelligent agent capable of playing Tic-Tac-Toe and predicting the next move to play. The project involves data collection, model training, and evaluation to create a robust AI that can compete against human players or other AI opponents.
