@@ -18,11 +18,13 @@ Tic-Tac-Toe is a simple yet classic game played on a 3x3 grid. Players take turn
 This project is designed to create an AI that can (for now):
 - Simulate games and collect data.
 - Train on game data to predict the best next move.
+- Train with the hand to understand what really do a training model
 
 ## Features
 
 - **Game Simulation**: Automatically simulate and record multiple games of Tic-Tac-Toe.
 - **Data Processing**: Convert game records into tensors for machine learning models.
+- **Debugging function for each step**: Understand each layer of the model with vizualisation of tensor and his values 
 
 ## Installation
 
@@ -73,5 +75,25 @@ choose your dataset and for debug, the line at debug.
 
 tensor_converter = CSVToTensor('./Datasets/tic_tac_toe_10_games.csv')
 tensor_converter.csv_to_tensor(position)
+print(f"Input : {tensor_converter.game_tensor[position]}")
+print(f"Output : {tensor_converter.prediction_tensor[position]}")
+```
+Output :
+```python
+Input : tensor([1., 0., 1., 2., 0., 0., 0., 0., 0.])
+Output : tensor([0., 2., 0., 0., 0., 0., 0., 0., 0.])
+```
+Convert you tensor (position in your CSV) in a vizualizer
+```python
+
 tensor_converter.tensor_to_view(position)
+```
+Output :
+```bash
+Current Game State:
+x | O | x
+---------
+o |   |  
+---------
+  |   |
 ```
