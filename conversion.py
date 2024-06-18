@@ -56,11 +56,12 @@ class CSVToTensor:
     def create_a_dataset(self):
         return torch.utils.data.TensorDataset(self.game_tensor, self.prediction_tensor)
 
-# if __name__ == '__main__':
-#     position = 1
-#     tensor = CSVToTensor('./Datasets/tic_tac_toe_10_games.csv')    
-#     tensor.print_data()
-#     tensor.csv_to_tensor(position)
-#     print(f"Input : {tensor.game_tensor[position]}")
-#     print(f"Output : {tensor.prediction_tensor[position]}")
-#     tensor.tensor_to_view(position)
+    
+if __name__ == '__main__':
+    position = 0
+    tensor = CSVToTensor('./Datasets/example.csv')
+    tensor.print_data()
+    tensor.csv_to_tensor(position)
+    print(f"Input : {tensor.game_tensor[position]}")
+    print(f"Output : {tensor.prediction_tensor[position]}")
+    tensor.tensor_to_view(position)
